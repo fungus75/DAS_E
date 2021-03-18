@@ -1,6 +1,6 @@
 # Basics
 import random, math
-from Helper import *
+from Helper2 import *
 
 # alle Primzahlen zwischen 0 und 500 finden und in ein Array schreiben
 primes = [i for i in range(0,500) if isPrime(i)]

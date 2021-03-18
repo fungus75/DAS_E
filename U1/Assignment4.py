@@ -1,4 +1,4 @@
-from Helper import *
+from Helper1 import *
 
 charStat=getCharStats("crypt2.txt")
 print(charStat)
