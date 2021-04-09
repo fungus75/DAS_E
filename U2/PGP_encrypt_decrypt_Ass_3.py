@@ -2,10 +2,11 @@ from U1.Helper1 import *
 from U2.Helper2 import *
 import random
 
-# 65 -90 Grossbuchstaben
+# 65 -90 Grossbuchstaben; Generate random Key with 10 characters
 key = ""
 for i in range(0, 10):
     key += chr(random.randrange(65, 90))
+
 text = """The Project Gutenberg EBook of The Adventures of Sherlock Holmes
 by Sir Arthur Conan Doyle
 (#15 in our series by Sir Arthur Conan Doyle)

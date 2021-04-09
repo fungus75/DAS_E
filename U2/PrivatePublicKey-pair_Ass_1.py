@@ -21,7 +21,7 @@ phi = (p-1) * (q-1)
 
 # gcd 2, damit start für while Schleife startet; Schleife läuft so lange, bis gcd von e und phi = 1
 gcd = 2
-while gcd != 1:
+while gcd != 1:  # when gcd is 1 the two are relativ prime to each other; gcd --> größter gemeinsamer Teiler
     e = random.randrange(1,phi)
     gcd = math.gcd(e,phi)
 

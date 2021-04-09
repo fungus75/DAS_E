@@ -7,6 +7,9 @@ base64_bytes = base64_message.encode('ascii')
 message_bytes = base64.b64decode(base64_bytes)
 message = message_bytes.decode('ascii')
 
+print(base64_message)
+print(base64_bytes)
+print(message_bytes)
 print(message)
 
 # Variable
@@ -27,6 +30,11 @@ for line in file:
     base64_bytes = base64.b64encode(message_bytes)
     # decode bytes to string
     base64_message = base64_bytes.decode('ascii')
+
+    print(" Message " + message)
+    print(message_bytes)
+    print(base64_bytes)
+    print(" base64 Message " +base64_message)
 
     # compre file if its starts with ICAgQ if yes +1
     if base64_message.startswith("ICAgQ"):

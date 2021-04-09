@@ -16,6 +16,7 @@ def isPrime(number):
     return True
 
 def encrypt(zeichen,e,n):
+    # ** entspricht ^
     cyphertext = (zeichen ** e) % n
     return cyphertext
 
