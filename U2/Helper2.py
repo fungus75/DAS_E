@@ -17,11 +17,11 @@ def isPrime(number):
 
 def encrypt(zeichen,e,n):
     # ** entspricht ^
-    cyphertext = (zeichen ** e) % n
+    cyphertext = (zeichen ** (e%n)) % n
     return cyphertext
 
 def decrypt(cypher,d,n):
-    plainText = (cypher ** d) % n
+    plainText = (cypher ** (d%n)) % n
     return plainText
 
 def encryptstring(text,e,n):
