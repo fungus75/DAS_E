@@ -3,10 +3,12 @@ import base64
 # it is line 152
 # 4.2.9. Pre-Shared Key Exchange Modes ......................51
 base64_message = 'ICAgICAgICAgICA0LjIuOS4gUHJlLVNoYXJlZCBLZXkgRXhjaGFuZ2UgTW9kZXMgLi4uLi4uLi4uLi4uLi4uLi4uLi4uLjUxCg=='
+test = base64.b64decode(base64_message)
 base64_bytes = base64_message.encode('ascii')
 message_bytes = base64.b64decode(base64_bytes)
 message = message_bytes.decode('ascii')
 
+print("test" + str(test))
 print(base64_message)
 print(base64_bytes)
 print(message_bytes)
@@ -31,10 +33,10 @@ for line in file:
     # decode bytes to string
     base64_message = base64_bytes.decode('ascii')
 
-    print(" Message " + message)
-    print(message_bytes)
-    print(base64_bytes)
-    print(" base64 Message " +base64_message)
+    # print(" Message " + message)
+    # print(message_bytes)
+    # print(base64_bytes)
+    # print(" base64 Message " +base64_message)
 
     # compre file if its starts with ICAgQ if yes +1
     if base64_message.startswith("ICAgQ"):
