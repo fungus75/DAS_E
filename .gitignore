@@ -1,8 +1,9 @@
 /venv/
 /.idea/
-/U3/archive/
-/U3/archive.zip
 /U3/email_security.pdf
+/U3/spam/
+/U3/ham/
+/U3/emails.csv
 /U3/ham/
 /U3/spam/
 /U3/emails.csv
