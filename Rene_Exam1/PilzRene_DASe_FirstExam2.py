@@ -25,12 +25,9 @@ Its sometimes her behaviour are contented. Do listening am eagerness oh objectio
 def findAllCharsInText(text, searched):
     searched=searched.lower()
     count=0
-    total=0
     for char in text:
-        total += 1
         if char.lower() == searched:
             count += 1
-    print(total)
     return count
 
 print("Found that much P in text: ",findAllCharsInText(text,"P"))
