@@ -1,0 +1,5 @@
+Spam Mails detection:
+$ / # / % / ? / ! / --> Dollar Zeichen zählen & Dollar ausgeschrieben
+..... / ----- --> Zeichenfolge überprüfen
+Wort filter --> Penis, Viagra, Medizin, Rolex, http_, _@_, money, free, price, sperm, porn
+Mail länge prüfen

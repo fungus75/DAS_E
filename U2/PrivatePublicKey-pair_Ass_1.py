@@ -38,7 +38,7 @@ print("publicKey: {",e,n,"}")
 print("privateKey: {",d,n,"}")
 
 
-ciphertext = encryptstring("Hallo abc",e,n)
+ciphertext = encryptstring("200051",e,n)
 print(ciphertext)
 
 print(decryotstring(ciphertext,d,n))
