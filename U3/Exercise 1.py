@@ -41,7 +41,7 @@ def wordstatistik(dir):
     for file in fileList:
         string = loadFile(f"{dir}/{file}")
         countWords(string, dictionary)
-    return sorted(dictionary.items(), key=lambda x: x[1], reverse=True)
+    return dictionary
 
 def countWords(string, dictionary = {}):
     words = string.split()
@@ -53,7 +53,14 @@ def countWords(string, dictionary = {}):
     return dictionary
 
 
-print(wordstatistik("ham"))
+def CommonSpamWords():
+    ham_dic = wordstatistik("ham")
+    spam_dic = wordstatistik("spam")
+
+    #spamÜberschuss = all(map( spamDic.pop, hamDic))
+    res = {key: spam_dic[key] - ham_dic.get(key, 0)
+                           for key in spam_dic.keys()}
+    print(dict(sorted(res.items(), key=lambda item: item[1])))
 
 #print(loadFile(r"spam\10.txt"))
 
