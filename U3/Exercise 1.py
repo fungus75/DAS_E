@@ -20,14 +20,16 @@ def amountWords(string):
     return number_of_words
 
 
-def countStrangeWords(string):
+def countFlagWords(string):
     count = 0
-    strange_word_list = ["porn", ".....", " , ", "penis", "viagra", "medicin", "rolex", "http ", " @ ", "money", "free",
-                         "price", "sperm"]
+    strange_word_list = [".....", "penis", "iagra", "medicin", "rolex", "http","money", "free",
+                         "price", "sperm", "microsoft", "pills", "xxx","medizin", "orn",'|', 'font', "td", "nbsp", "www", "moagra", "adobe", "xp"]
     for word in strange_word_list:
         count += string.count(word)
     return count
 
+def flagWords(string):
+    pass
 
 def printOverview(string):
     print(string)
@@ -61,6 +63,38 @@ def CommonSpamWords():
     res = {key: spam_dic[key] - ham_dic.get(key, 0)
                            for key in spam_dic.keys()}
     print(dict(sorted(res.items(), key=lambda item: item[1])))
+
+def strangeWordsFaktor(string):
+    count = countFlagWords(string)
+    amount = amountWords(string)
+    faktor = count/amount
+    return faktor
+
+
+def isspam(string):
+    if countDollar(string) > 2 or string.count("#") > 4 or string.count("%") > 2 or string.count("?") > 6 or string.count("dollar") > 0 or string.count("!") > 2:
+        return True
+    if countFlagWords(string) > 1:
+        return True
+    if strangeWordsFaktor(string) > 0.02:
+        return True
+    if len(string)< 60:
+        return True
+
+
+def spamstatistik(dir):
+    dictionary = {}
+    fileList = getFileOfDirectory(dir)
+    spamcount = 0
+    for file in fileList:
+        string = loadFile(f"{dir}/{file}")
+        if isspam(string):
+            spamcount += 1
+    faktor = spamcount/len(fileList)
+    return faktor
+
+print(spamstatistik("ham"))
+print(spamstatistik("spam"))
 
 #print(loadFile(r"spam\10.txt"))
 
