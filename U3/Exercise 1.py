@@ -22,7 +22,7 @@ def amountWords(string):
 
 def countFlagWords(string):
     count = 0
-    strange_word_list = [".....", "penis", "iagra", "medicin", "rolex", "http","money", "free",
+    strange_word_list = ["....", "penis", "iagra", "medicin", "rolex", "http","money", "free",
                          "price", "sperm", "microsoft", "pills", "xxx","medizin", "orn",'|', 'font', "td", "nbsp", "www", "moagra", "adobe", "xp"]
     for word in strange_word_list:
         count += string.count(word)
